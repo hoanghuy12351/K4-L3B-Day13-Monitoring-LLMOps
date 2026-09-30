@@ -1,0 +1,22 @@
+CP3 incident metric evidence
+
+Challenge ID: day13-k4-l3b-monitoring-llmops-v1
+Challenge window: 2026-09-30 22:36:20–22:36:37 +07 (15:36:20–15:36:37 UTC)
+Command: .\.venv\Scripts\python.exe scripts\load_test.py --challenge --concurrency 5
+
+Challenge request correlation IDs and client-observed latency:
+- req-d930f830: 15699.9 ms
+- req-9f4a421e: 15698.8 ms
+- req-e97cb1c5: 15699.4 ms
+- req-6fb34b03: 15699.9 ms
+- req-7f8b5e56: 15700.1 ms
+
+Dashboard snapshot for minute 15:36 UTC:
+- Traffic: 5 requests
+- Latency P95: 3603.60 ms
+- Dashboard threshold: 3000 ms
+- Challenge threshold: 2000 ms
+- Error rate: 0%
+- Retrieval success rate: 100%
+
+The high latency with zero errors indicates a performance incident, not an availability or retrieval-correctness failure. Client latency is higher than the per-request server metric because blocking work serialized concurrent requests and queueing time is outside the server-side LabAgent timer.

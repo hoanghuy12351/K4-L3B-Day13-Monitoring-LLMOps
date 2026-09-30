@@ -1,0 +1,9 @@
+CP3 incident log evidence
+
+Source: data/logs.jsonl line 99 after the official challenge run
+Selection rule: event=response_sent and correlation_id=req-d930f830
+Challenge threshold: 2000 ms
+
+{"service": "api", "latency_ms": 3841, "ttft_ms": 50, "tokens_in": 34, "tokens_out": 98, "cost_usd": 0.001572, "quality_score": 0.9, "tool_name": "retrieval", "tool_success": true, "payload": {"answer_preview": "Starter answer. You should improve this output logic and add better quality chec..."}, "event": "response_sent", "model": "claude-sonnet-4-5", "feature": "monitoring", "session_id": "k4-l3b-challenge-s02", "correlation_id": "req-d930f830", "user_id_hash": "2f2fc5ebba0b", "env": "dev", "level": "info", "ts": "2026-09-30T15:36:26.937084Z"}
+
+Interpretation: latency_ms=3841 exceeds the challenge threshold while tool_success=true. This log selects the exact request to join with Langfuse; it does not by itself identify the slow span.

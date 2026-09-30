@@ -1,0 +1,18 @@
+CP3 official challenge execution
+
+Challenge: day13-k4-l3b-monitoring-llmops-v1
+Cohort: K4
+Started: 2026-09-30T22:36:19.6415783+07:00
+Ended: 2026-09-30T22:36:37.6562620+07:00
+
+[200] req-d930f830 | monitoring | 15699.9ms
+[200] req-9f4a421e | monitoring | 15698.8ms
+[200] req-e97cb1c5 | monitoring | 15699.4ms
+[200] req-6fb34b03 | monitoring | 15699.9ms
+[200] req-7f8b5e56 | monitoring | 15700.1ms
+
+Recovery command: .\.venv\Scripts\python.exe scripts\inject_incident.py --disable
+Recovery result: HTTP 200; rag_slow=false, tool_fail=false, cost_spike=false
+Post-recovery request: req-44a11d47
+Post-recovery latency: 162 ms server-side; 336.7 ms client-observed; HTTP 200
+Challenge config protection: git check-ignore resolves config/challenge.json through .gitignore line 9.
