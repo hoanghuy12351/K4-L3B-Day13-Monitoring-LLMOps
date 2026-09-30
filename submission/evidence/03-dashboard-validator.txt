@@ -1,0 +1,5 @@
+Command: .\.venv\Scripts\python.exe scripts\validate_dashboard.py
+Date: 2026-09-30
+Checkpoint: CP4 final rerun
+Result: HỢP LỆ: 6/6 panel có trong dashboard contract.
+Note: This validates the YAML contract only; runtime screenshots are 11-dashboard-overview.png and 11-dashboard-bottom.png.
