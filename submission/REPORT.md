@@ -8,7 +8,7 @@
 - **MSSV:** 2A202602548
 - **Lớp:** K4-L3B
 - **Repository URL:** https://github.com/hoanghuy12351/K4-L3B-Day13-Monitoring-LLMOps
-- **Commit SHA cuối:** Chưa tạo commit nộp; điền SHA được nộp trên LMS sau khi rà soát và commit toàn bộ artifact CP4.
+- **Commit SHA cuối:** 93b05782475bb98e19023b6c37222ee36fb4cc48
 - **Challenge ID:** `day13-k4-l3b-monitoring-llmops-v1`
 - **Tên project Langfuse cá nhân:** `day13-k4-l3b-2A202602548`
 
