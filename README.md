@@ -192,6 +192,8 @@ Không capture raw prompt/output chứa PII vì người dùng có thể nhập 
 
 Dashboard dùng `data/logs.jsonl` làm nguồn chuẩn và giữ đúng 6 panel trong `config/dashboard.yaml`. Panel latency phải có P50/P95/P99 và TTFT; panel errors phải thể hiện cả retrieval success. Sau đó hoàn thiện:
 
+Dashboard runtime của repo mở tại `http://127.0.0.1:8000/dashboard` khi API đang chạy. Để tạo 10 request thử nghiệm không chứa PII và trace tương ứng, chạy `python scripts/run_cp2_workload.py --label production --limit 10` từ thư mục gốc; xem hướng dẫn trong `docs/DASHBOARD_SETUP.md`.
+
 - `config/slo.yaml`: giải thích hoặc điều chỉnh SLO, tính error budget;
 - `config/alert_rules.yaml`: ba alert symptom-based, có duration, severity, owner, Slack channel và runbook;
 - `docs/alerts.md`: cách kiểm tra và mitigation cho từng alert.

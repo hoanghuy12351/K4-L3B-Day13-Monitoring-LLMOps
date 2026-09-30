@@ -44,6 +44,15 @@ Tên menu/nút trên Langfuse có thể thay đổi nhẹ theo phiên bản, nh�
 5. Chuyển label `production` sang version 2, chạy lại một request.
 6. Rollback `production` về version 1 và lưu ảnh evidence.
 
+Trong repo này có thể tạo hai trace cùng input an toàn mà không sửa `.env`:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_cp2_workload.py --label baseline --same-input --limit 1
+.\.venv\Scripts\python.exe scripts\run_cp2_workload.py --label candidate --same-input --limit 1
+```
+
+Script gọi FastAPI trong tiến trình local rồi flush trace lên project Langfuse của key trong `.env`. Sau khi chuyển label `production` trên Web UI, chạy lại với `--label production --same-input --limit 1` để kiểm tra version thực tế; label có thể được SDK cache tối đa 60 giây trong một tiến trình API đang chạy.
+
 Không chấm prompt nào “hay hơn”. Điểm nằm ở khả năng truy xuất version, đổi label và rollback có bằng chứng.
 
 ## Evidence
